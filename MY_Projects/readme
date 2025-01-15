@@ -1,0 +1,138 @@
+Scenario 1: Making an Espresso
+
+User Action: Click on "Make Espresso" button.
+System Checks: Does the user have enough resources (50 ml of water and 20 grams of coffee beans)?
+Result: Espresso is made.
+markdown
+Copy code
+-------------------------------------------------
+|            Coffee Machine                     |
+-------------------------------------------------
+| Water: 950 ml                                 |
+| Coffee Beans: 480 grams                       |
+| Milk: 500 ml                                  |
+-------------------------------------------------
+| [Make Espresso]  [Make Latte]  [Make Cappuccino]|
+| [Refill Water]  [Refill Beans]  [Refill Milk]  |
+-------------------------------------------------
+Message: "Espresso made successfully!"
+
+Scenario 2: Making a Latte
+
+User Action: Click on "Make Latte" button.
+System Checks: Does the user have enough resources (100 ml water, 20 grams coffee beans, 50 ml milk)?
+Result: Latte is made.
+markdown
+Copy code
+-------------------------------------------------
+|            Coffee Machine                     |
+-------------------------------------------------
+| Water: 850 ml                                 |
+| Coffee Beans: 460 grams                       |
+| Milk: 450 ml                                  |
+-------------------------------------------------
+| [Make Espresso]  [Make Latte]  [Make Cappuccino]|
+| [Refill Water]  [Refill Beans]  [Refill Milk]  |
+-------------------------------------------------
+Message: "Latte made successfully!"
+
+Scenario 3: Making a Cappuccino
+
+User Action: Click on "Make Cappuccino" button.
+System Checks: Does the user have enough resources (100 ml water, 20 grams coffee beans, 50 ml milk)?
+Result: Cappuccino is made.
+markdown
+Copy code
+-------------------------------------------------
+|            Coffee Machine                     |
+-------------------------------------------------
+| Water: 750 ml                                 |
+| Coffee Beans: 440 grams                       |
+| Milk: 400 ml                                  |
+-------------------------------------------------
+| [Make Espresso]  [Make Latte]  [Make Cappuccino]|
+| [Refill Water]  [Refill Beans]  [Refill Milk]  |
+-------------------------------------------------
+Message: "Cappuccino made successfully!"
+
+Scenario 4: Refill Resources
+
+User Action: Click on "Refill Milk" button.
+Result: Milk is refilled to 500 ml.
+markdown
+Copy code
+-------------------------------------------------
+|            Coffee Machine                     |
+-------------------------------------------------
+| Water: 750 ml                                 |
+| Coffee Beans: 440 grams                       |
+| Milk: 500 ml                                  |
+-------------------------------------------------
+| [Make Espresso]  [Make Latte]  [Make Cappuccino]|
+| [Refill Water]  [Refill Beans]  [Refill Milk]  |
+-------------------------------------------------
+Message: "Milk refilled!"
+
+Scenario 5: Insufficient Resources for Cappuccino
+
+User Action: Click on "Make Cappuccino" button.
+System Checks: Does the user have enough resources (100 ml water, 20 grams coffee beans, 50 ml milk)?
+Result: Not enough water or coffee beans to make Cappuccino.
+markdown
+Copy code
+-------------------------------------------------
+|            Coffee Machine                     |
+-------------------------------------------------
+| Water: 750 ml                                 |
+| Coffee Beans: 440 grams                       |
+| Milk: 500 ml                                  |
+-------------------------------------------------
+| [Make Espresso]  [Make Latte]  [Make Cappuccino]|
+| [Refill Water]  [Refill Beans]  [Refill Milk]  |
+-------------------------------------------------
+Message: "Not enough resources to make Cappuccino!"
+
+Scenario 6: Refilling Resources
+
+User Action: Click on "Refill Water" button.
+Result: Water is refilled to 1000 ml.
+markdown
+Copy code
+-------------------------------------------------
+|            Coffee Machine                     |
+-------------------------------------------------
+| Water: 1000 ml                                |
+| Coffee Beans: 440 grams                       |
+| Milk: 500 ml                                  |
+-------------------------------------------------
+| [Make Espresso]  [Make Latte]  [Make Cappuccino]|
+| [Refill Water]  [Refill Beans]  [Refill Milk]  |
+-------------------------------------------------
+Message: "Water refilled!"
+
+Scenario 7: Refilling Coffee Beans
+
+User Action: Click on "Refill Coffee Beans" button.
+Result: Coffee Beans are refilled to 500 grams.
+markdown
+Copy code
+-------------------------------------------------
+|            Coffee Machine                     |
+-------------------------------------------------
+| Water: 1000 ml                                |
+| Coffee Beans: 500 grams                       |
+| Milk: 500 ml                                  |
+-------------------------------------------------
+| [Make Espresso]  [Make Latte]  [Make Cappuccino]|
+| [Refill Water]  [Refill Beans]  [Refill Milk]  |
+-------------------------------------------------
+Message: "Coffee Beans refilled!"
+
+Summary of User Actions:
+Make Espresso: Decreases water by 50 ml and coffee beans by 20 grams.
+Make Latte: Decreases water by 100 ml, coffee beans by 20 grams, and milk by 50 ml.
+Make Cappuccino: Decreases water by 100 ml, coffee beans by 20 grams, and milk by 50 ml.
+Refill Water: Resets water to 1000 ml.
+Refill Coffee Beans: Resets coffee beans to 500 grams.
+Refill Milk: Resets milk to 500 ml.
+Messages will appear based on successful or failed actions, like "Espresso made successfully!" or "Not enough resources!"
